@@ -3,13 +3,13 @@ view: sample_data_v3 {
     ;;
 
   dimension: cd_stage {
-    label: "stage"
     type: string
-    description: "case stages"
+    description: "case stage id number"
     sql: ${TABLE}.CD_STAGE ;;
   }
 
   dimension_group: dt_stage_close {
+    label: "stage close date"
     type: time
     timeframes: [
       raw,
@@ -25,6 +25,7 @@ view: sample_data_v3 {
   }
 
   dimension_group: dt_stage_start {
+    label: "stage start date"
     type: time
     timeframes: [
       raw,
@@ -40,11 +41,13 @@ view: sample_data_v3 {
   }
 
   dimension: id_case {
+    label: "case number"
     type: number
     sql: ${TABLE}.ID_CASE ;;
   }
 
   dimension: id_event {
+    label: "event number"
     type: number
     sql: ${TABLE}.ID_EVENT ;;
   }
@@ -62,6 +65,7 @@ view: sample_data_v3 {
   }
 
   dimension: nm_stage {
+    label: "case stage"
     type: string
     sql: ${TABLE}.NM_STAGE ;;
   }
