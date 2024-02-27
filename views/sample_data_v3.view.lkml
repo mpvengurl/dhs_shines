@@ -83,7 +83,7 @@ view: sample_data_v3 {
   }
 
   measure: count {
-    label: "applicant count"
+    label: "applicants"
     type: count
     drill_fields: []
   }
