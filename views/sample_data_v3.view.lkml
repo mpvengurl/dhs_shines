@@ -56,7 +56,7 @@ view: sample_data_v3 {
     label: "Cases"
     type: string
     sql: ${TABLE}.NARRATIVE ;;
-    description: "Field contains Case's therapy and foster information"
+    description: "Field contains Case's therapy, medical and foster information"
   }
 
   dimension: nm_stage {
