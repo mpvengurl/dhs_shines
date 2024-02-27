@@ -56,7 +56,7 @@ view: sample_data_v3 {
     label: "cases"
     type: string
     sql: ${TABLE}.NARRATIVE ;;
-    description: "cases with therapy, medical and foster details across ages in years"
+    description: "cases with therapy, medical and foster care across ages in years"
   }
 
   dimension: nm_stage {
