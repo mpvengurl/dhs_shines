@@ -53,10 +53,10 @@ view: sample_data_v3 {
   }
 
   dimension: narrative {
-    label: "Cases"
+    label: "cases"
     type: string
     sql: ${TABLE}.NARRATIVE ;;
-    description: "Field contains Case's therapy, medical and foster information"
+    description: "cases with therapy, medical and foster details across ages in years"
   }
 
   dimension: nm_stage {
