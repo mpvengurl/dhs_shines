@@ -1,7 +1,12 @@
 view: sample_data_v3 {
   sql_table_name: `mpv-only-bq.dhs_sample_caseworker_data.sample_data_v3`
     ;;
-
+  dimension: nm_stage {
+    label: "case stage"
+    type: string
+    description: "case stage description"
+    sql: ${TABLE}.NM_STAGE ;;
+  }
   dimension: cd_stage {
     label: "abbreviation for case stage"
     type: string
@@ -67,12 +72,7 @@ view: sample_data_v3 {
     description: "case details with therapy, medical and foster care"
   }
 
-  dimension: nm_stage {
-    label: "case stage"
-    type: string
-    description: "case stage description"
-    sql: ${TABLE}.NM_STAGE ;;
-  }
+
 
   dimension: txt_stage_priority_cmnt {
     type: string
