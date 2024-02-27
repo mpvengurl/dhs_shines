@@ -55,6 +55,7 @@ view: sample_data_v3 {
   dimension: narrative {
     type: string
     sql: ${TABLE}.NARRATIVE ;;
+    description: "Field contains Case's therapy and foster information"
   }
 
   dimension: nm_stage {
