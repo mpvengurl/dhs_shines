@@ -3,7 +3,9 @@ view: sample_data_v3 {
     ;;
 
   dimension: cd_stage {
+    label: "stage"
     type: string
+    description: "case stages"
     sql: ${TABLE}.CD_STAGE ;;
   }
 
