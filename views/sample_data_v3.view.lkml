@@ -4,7 +4,7 @@ view: sample_data_v3 {
 
   dimension: cd_stage {
     type: string
-    description: "case stage id number"
+    description: "abbreviation for case stage"
     sql: ${TABLE}.CD_STAGE ;;
   }
 
@@ -53,7 +53,9 @@ view: sample_data_v3 {
   }
 
   dimension: id_stage {
+    label: "stage number"
     type: number
+    description: "state number of stage code"
     sql: ${TABLE}.ID_STAGE ;;
   }
 
