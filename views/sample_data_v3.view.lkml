@@ -3,6 +3,7 @@ view: sample_data_v3 {
     ;;
 
   dimension: cd_stage {
+    label: "case stage abbreviation"
     type: string
     description: "abbreviation for case stage"
     sql: ${TABLE}.CD_STAGE ;;
@@ -69,6 +70,7 @@ view: sample_data_v3 {
   dimension: nm_stage {
     label: "case stage"
     type: string
+    description: "case stage description"
     sql: ${TABLE}.NM_STAGE ;;
   }
 
