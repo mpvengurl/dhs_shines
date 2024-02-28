@@ -1,21 +1,18 @@
 view: sample_data_v3 {
   sql_table_name: `mpv-only-bq.dhs_sample_caseworker_data.sample_data_v3`
     ;;
-  dimension: nm_stage {
-    label: "case stage"
-    type: string
-    description: "case stage description"
-    sql: ${TABLE}.NM_STAGE ;;
-  }
+
   dimension: cd_stage {
-    label: "abbreviation for case stage"
     type: string
-    description: "abbreviation for case stage"
     sql: ${TABLE}.CD_STAGE ;;
   }
 
+  dimension: cd_stage_1 {
+    type: string
+    sql: ${TABLE}.CD_STAGE_1 ;;
+  }
+
   dimension_group: dt_stage_close {
-    label: "stage close date"
     type: time
     timeframes: [
       raw,
@@ -31,7 +28,6 @@ view: sample_data_v3 {
   }
 
   dimension_group: dt_stage_start {
-    label: "stage start date"
     type: time
     timeframes: [
       raw,
@@ -46,33 +42,40 @@ view: sample_data_v3 {
     sql: ${TABLE}.DT_STAGE_START ;;
   }
 
+  dimension_group: dt_stage_start_1 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.DT_STAGE_START_1 ;;
+  }
+
   dimension: id_case {
-    label: "case number"
     type: number
     sql: ${TABLE}.ID_CASE ;;
   }
 
-  dimension: id_event {
-    label: "event number"
-    type: number
-    sql: ${TABLE}.ID_EVENT ;;
-  }
-
   dimension: id_stage {
-    label: "stage number"
     type: number
-    description: "state number of stage code"
     sql: ${TABLE}.ID_STAGE ;;
   }
 
   dimension: narrative {
-    label: "cases"
     type: string
     sql: ${TABLE}.NARRATIVE ;;
-    description: "case details with therapy, medical and foster care"
   }
 
-
+  dimension: nm_stage {
+    type: string
+    sql: ${TABLE}.NM_STAGE ;;
+  }
 
   dimension: txt_stage_priority_cmnt {
     type: string
@@ -85,7 +88,6 @@ view: sample_data_v3 {
   }
 
   measure: count {
-    label: "applicants"
     type: count
     drill_fields: []
   }
