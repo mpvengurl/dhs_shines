@@ -48,7 +48,9 @@ view: sample_data_v3 {
   }
 
   dimension: narrative {
+    label: "details"
     type: string
+    description: "All details about the case interaction that are not in other columns"
     sql: ${TABLE}.NARRATIVE ;;
   }
 
