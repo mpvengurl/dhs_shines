@@ -48,7 +48,7 @@ view: sample_data_v3 {
   }
 
   dimension: narrative {
-    label: "Case Narrative Details"
+    label: "Cases Narrative Details"
     type: string
     description: "Positive negative abuse high risk crime criminal cases details"
     sql: ${TABLE}.NARRATIVE ;;
