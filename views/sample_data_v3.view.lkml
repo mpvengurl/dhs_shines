@@ -7,11 +7,6 @@ view: sample_data_v3 {
     sql: ${TABLE}.CD_STAGE ;;
   }
 
-  dimension: cd_stage_1 {
-    type: string
-    sql: ${TABLE}.CD_STAGE_1 ;;
-  }
-
   dimension_group: dt_stage_close {
     type: time
     timeframes: [
@@ -40,21 +35,6 @@ view: sample_data_v3 {
     convert_tz: no
     datatype: date
     sql: ${TABLE}.DT_STAGE_START ;;
-  }
-
-  dimension_group: dt_stage_start_1 {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}.DT_STAGE_START_1 ;;
   }
 
   dimension: id_case {
