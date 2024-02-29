@@ -82,6 +82,6 @@ view: sample_data_v3 {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [narrative,id_event]
   }
 }
