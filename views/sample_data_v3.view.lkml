@@ -48,7 +48,7 @@ view: sample_data_v3 {
   }
 
   dimension: narrative {
-    label: "Details"
+    label: "Case Narrative Details"
     type: string
     description: "All details about the case interaction that are not in other columns positive reports or abuse details"
     sql: ${TABLE}.NARRATIVE ;;
