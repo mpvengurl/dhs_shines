@@ -10,4 +10,4 @@ datagroup: dhs_shines_default_datagroup {
 
 persist_with: dhs_shines_default_datagroup
 
-explore: sample_data_v3 {}
+explore: dhsshines {}

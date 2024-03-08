@@ -1,5 +1,5 @@
-view: sample_data_v3 {
-  sql_table_name: `mpv-only-bq.dhs_sample_caseworker_data.sample_data_v3`
+view: dhsshines {
+  sql_table_name: `mpv-only-bq.dhs_shinesCAPS.dhs-shines`
     ;;
 
   dimension: cd_stage {
@@ -42,16 +42,24 @@ view: sample_data_v3 {
     sql: ${TABLE}.ID_CASE ;;
   }
 
+  dimension: id_event {
+    type: number
+    sql: ${TABLE}.ID_EVENT ;;
+  }
+
   dimension: id_stage {
     type: number
     sql: ${TABLE}.ID_STAGE ;;
   }
 
   dimension: narrative {
-    label: "Notes"
     type: string
-    description: "Positive negative abuse high risk crime criminal cases details like"
     sql: ${TABLE}.NARRATIVE ;;
+  }
+
+  dimension: narrative_text {
+    type: string
+    sql: ${TABLE}.NARRATIVE_TEXT ;;
   }
 
   dimension: nm_stage {
