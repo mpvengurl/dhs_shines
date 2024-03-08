@@ -79,7 +79,4 @@ view: dhsshines {
     type: count
     drill_fields: []
   }
-  filter: soundexfilter {
-    sql: soundex(${narrative_text}) ;;
-  }
 }
