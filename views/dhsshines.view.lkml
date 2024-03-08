@@ -52,11 +52,6 @@ view: dhsshines {
     sql: ${TABLE}.ID_STAGE ;;
   }
 
-  dimension: narrative {
-    type: string
-    sql: ${TABLE}.NARRATIVE ;;
-  }
-
   dimension: narrative_text {
     type: string
     sql: ${TABLE}.NARRATIVE_TEXT ;;
