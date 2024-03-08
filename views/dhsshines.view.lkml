@@ -55,7 +55,7 @@ view: dhsshines {
   dimension: narrative_text {
     label: "Notes"
     type: string
-    sql: (SELECT soundex(${TABLE}.NARRATIVE_TEXT) from dhs-shines);;
+    sql: (soundex(${TABLE}.NARRATIVE_TEXT);;
     drill_fields: [id_case, id_stage, id_event]
     case_sensitive: no
   }
